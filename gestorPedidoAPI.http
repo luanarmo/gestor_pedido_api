@@ -56,7 +56,7 @@ Content-Type: application/json
 
 ###
 
-DELETE {{gestorPedidoAPI_HostAddress}}/pedidos/2
+DELETE {{gestorPedidoAPI_HostAddress}}/pedidos/3
 
 ###
 
