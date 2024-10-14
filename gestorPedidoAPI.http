@@ -1,0 +1,84 @@
+﻿@gestorPedidoAPI_HostAddress = http://localhost:5179
+
+GET {{gestorPedidoAPI_HostAddress}}/productos/
+
+###
+
+POST {{gestorPedidoAPI_HostAddress}}/productos/
+Content-Type: application/json
+
+{
+  "nombre":"Refresco",
+  "precio": 20
+}
+###
+
+PUT {{gestorPedidoAPI_HostAddress}}/productos/1
+Content-Type: application/json
+
+{
+  "nombre":"Paleta",
+  "precio": 5
+}
+
+###
+
+GET {{gestorPedidoAPI_HostAddress}}/productos/2
+
+###
+
+DELETE {{gestorPedidoAPI_HostAddress}}/productos/2
+
+###
+
+GET {{gestorPedidoAPI_HostAddress}}/pedidos/
+
+###
+
+POST {{gestorPedidoAPI_HostAddress}}/pedidos/
+Content-Type: application/json
+{
+  "fecha": "2021-06-01",
+  "cliente_id": 1
+}
+###
+
+GET {{gestorPedidoAPI_HostAddress}}/pedidos/1
+
+###
+
+PUT {{gestorPedidoAPI_HostAddress}}/pedidos/1
+Content-Type: application/json
+{
+  "fecha": "2021-07-05",
+  "cliente_id": 1
+}
+
+###
+
+DELETE {{gestorPedidoAPI_HostAddress}}/pedidos/2
+
+###
+
+GET {{gestorPedidoAPI_HostAddress}}/pedidos/1/productos
+
+###
+
+POST {{gestorPedidoAPI_HostAddress}}/pedidos/1/productos
+Content-Type: application/json
+{
+  "producto": 3,
+  "cantidad": 1
+}
+###
+
+DELETE {{gestorPedidoAPI_HostAddress}}/pedidos/1/productos/3
+
+###
+
+PUT {{gestorPedidoAPI_HostAddress}}/pedidos/1/productos/3
+Content-Type: application/json
+{
+  
+}
+###
