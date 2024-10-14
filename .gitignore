@@ -1,0 +1,57 @@
+# Build Folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.sln.docstates
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# Rider
+.idea/
+*.sln.iml
+
+# DotNet Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuspec
+
+# Logs
+*.log
+
+# Secrets
+secrets.json
+
+# Test Results
+TestResults/
+*.trx
+
+# Coverage Results
+coverage/
+
+# Azure Functions
+bin/
+obj/
+local.settings.json
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Other files
+*.db
+*.pdb
+*.mdb
