@@ -83,10 +83,18 @@ pedidosItems.MapPut("/{id}", async (PedidosDb db, int id, Pedido pedido) =>
 
 pedidosItems.MapDelete("/{id}", async (PedidosDb db, int id) =>
 {
-    var pedido = await db.Pedidos.FindAsync(id);
+    var pedido = await db.Pedidos
+        .Include(p => p.PedidoProductos)
+        .FirstOrDefaultAsync(p => p.Id == id);
+
     if (pedido == null)
     {
-        return Results.NotFound();
+        return Results.NotFound("El pedido no existe");
+    }
+
+    if (pedido.PedidoProductos != null && pedido.PedidoProductos.Any())
+    {
+        return Results.BadRequest("No se puede eliminar el pedido porque tiene productos asociados");
     }
 
     db.Pedidos.Remove(pedido);
